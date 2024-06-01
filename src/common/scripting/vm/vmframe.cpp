@@ -671,7 +671,8 @@ CVMAbortException::CVMAbortException(EVMAbortException reason, const char *morei
 	}
 
 	if (vm_jit)
-		stacktrace = JitCaptureStackTrace(1, false);
+		// stacktrace = JitCaptureStackTrace(1, false);
+		stacktrace = "";
 	else
 		stacktrace = "";
 }
